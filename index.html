@@ -1,0 +1,1139 @@
+<meta charset="utf-8">
+<title>Regolamento Lega ASS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:wght@400;500;600;700&amp;family=Chakra+Petch:wght@500;600;700&amp;display=swap">
+
+<style>
+/* ==========================================================================
+   LEGA ASS 2026/27 - notte di stadio
+   Display: Archivo Black - Body: Archivo - Dati: Chakra Petch
+   Tema unico scuro, colori dichiarati esplicitamente ovunque.
+   ========================================================================== */
+
+:root{
+  --bg:#07100B;
+  --bg2:#0A1710;
+  --panel:#0F1D15;
+  --panel-2:#132419;
+  --line:#1D3527;
+  --line-2:#2A4A37;
+  --ink:#ECF6EF;
+  --ink-2:#A3BCAD;
+  --ink-3:#6E8A7A;
+  --volt:#C8F03F;
+  --volt-ink:#0B1405;
+  --volt-dim:#8FB32A;
+  --bonus:#4BE39A;
+  --malus:#FF7E68;
+  --c-camp:#3DDC97;
+  --c-ucl:#6C97FF;
+  --c-uel:#FFA13D;
+  --c-cit:#FF5C8A;
+  --c-hig:#BE93FF;
+  --m-std:#FF6E5E;
+  --m-get:#5FA8FF;
+  --m-pre:#C08BFF;
+  --r:16px;
+  --r-s:10px;
+  --f-d:'Archivo Black','Arial Black',system-ui,sans-serif;
+  --f-b:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-n:'Chakra Petch','IBM Plex Mono',ui-monospace,monospace;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--f-b);font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--volt);text-underline-offset:3px;
+  text-decoration-color:rgba(200,240,63,.4)}
+:focus-visible{outline:2px solid var(--volt);outline-offset:3px;border-radius:6px}
+svg{display:block}
+.ic{width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;
+  stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(90% 120% at 85% -20%, #10281A 0%, transparent 55%),
+    radial-gradient(70% 90% at 0% 100%, #0C1F14 0%, transparent 50%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.hero-pitch{
+  position:absolute;inset:auto -140px -180px auto;width:560px;height:560px;
+  border:2px solid #16301F;border-radius:50%;opacity:.8;pointer-events:none;
+}
+.hero-pitch::after{
+  content:"";position:absolute;inset:120px;border:2px solid #142B1C;border-radius:50%;
+}
+.hero-in{position:relative;max-width:1080px;margin:0 auto;padding:52px 22px 40px}
+.kick{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--f-n);font-weight:600;font-size:12.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--volt);
+  border:1px solid rgba(200,240,63,.35);border-radius:99px;padding:7px 15px;
+  background:rgba(200,240,63,.07);
+}
+.kick .ic{width:15px;height:15px}
+h1.mark{
+  font-family:var(--f-d);font-size:clamp(52px,11vw,110px);line-height:.9;
+  margin:24px 0 0;text-transform:uppercase;letter-spacing:-.015em;color:var(--ink);
+}
+h1.mark em{font-style:normal;color:var(--volt)}
+.hero-sub{
+  margin:20px 0 0;max-width:56ch;font-size:18px;line-height:1.55;color:var(--ink-2);
+}
+.hero-sub b{color:var(--ink);font-weight:600}
+.score{
+  display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0;padding:0;list-style:none;
+}
+.score li{
+  display:flex;align-items:baseline;gap:9px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:12px 18px;
+}
+.score b{font-family:var(--f-n);font-weight:700;font-size:26px;line-height:1;
+  color:var(--volt);font-variant-numeric:tabular-nums}
+.score span{font-family:var(--f-n);font-weight:600;font-size:11.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.hero-date{
+  display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;
+  background:var(--volt);color:var(--volt-ink);border-radius:12px;
+  padding:13px 20px;font-weight:700;font-size:15.5px;
+}
+.hero-date .ic{width:19px;height:19px;stroke-width:2}
+.hero-date b{font-family:var(--f-n);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:40;
+  background:rgba(7,16,11,.86);backdrop-filter:blur(12px) saturate(1.3);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{
+  max-width:1080px;margin:0 auto;padding:10px 16px;
+  display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;
+}
+.nav-in::-webkit-scrollbar{display:none}
+.nav a{
+  flex:none;display:flex;align-items:center;gap:8px;text-decoration:none;
+  font-family:var(--f-n);font-weight:600;font-size:12.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);
+  padding:8px 14px;border-radius:99px;border:1px solid transparent;
+  transition:color .15s,background .15s;
+}
+.nav a .ic{width:15px;height:15px}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--volt);background:rgba(200,240,63,.09);border-color:rgba(200,240,63,.35)}
+
+/* ---------- sezioni ---------- */
+main{padding-bottom:90px}
+.sec{padding-top:72px;scroll-margin-top:60px}
+.sec-h{margin:0 0 26px}
+.sec-kick{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--f-n);font-weight:600;font-size:12px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--volt);
+}
+.sec-kick::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec-t{
+  font-family:var(--f-d);font-size:clamp(30px,5.5vw,46px);line-height:.98;
+  margin:10px 0 0;text-transform:uppercase;letter-spacing:-.01em;
+}
+.lead{max-width:62ch;font-size:17px;color:var(--ink-2);margin:0 0 6px}
+.lead b, .lead strong{color:var(--ink)}
+
+/* ---------- pannelli e chip ---------- */
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:20px 22px;
+}
+.grid2{display:grid;gap:16px}
+@media (min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{
+  font-family:var(--f-n);font-weight:600;font-size:13.5px;letter-spacing:.02em;
+  background:var(--panel-2);border:1px solid var(--line-2);border-radius:99px;
+  padding:7px 14px;color:var(--ink-2);
+}
+.fact{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;padding:15px 0;border-top:1px solid var(--line)}
+.fact:first-of-type{border-top:0;padding-top:4px}
+.fact > .ic{width:20px;height:20px;color:var(--volt);margin-top:3px;grid-row:1/3}
+.fact h4{margin:0;font-family:var(--f-n);font-weight:600;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.fact p{margin:0;color:var(--ink-2);font-size:15.5px;max-width:62ch}
+.fact p b{color:var(--ink)}
+
+/* ---------- reparti ---------- */
+.reparti{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0 0}
+@media (min-width:640px){.reparti{grid-template-columns:repeat(4,1fr)}}
+.rep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:18px 14px;text-align:center;position:relative;overflow:hidden;
+}
+.rep::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--c)}
+.rep .ic{width:22px;height:22px;color:var(--c);margin:0 auto}
+.rep b{display:block;font-family:var(--f-n);font-weight:700;font-size:34px;line-height:1.1;
+  color:var(--ink);margin-top:8px;font-variant-numeric:tabular-nums}
+.rep span{display:block;font-family:var(--f-n);font-weight:600;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-top:2px}
+
+/* ---------- moduli ---------- */
+.mods{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0 0;padding:0;list-style:none}
+.mods li{
+  font-family:var(--f-n);font-weight:700;font-size:16px;letter-spacing:.04em;
+  background:var(--panel-2);border:1px solid var(--line-2);border-radius:10px;
+  padding:9px 15px;color:var(--ink);font-variant-numeric:tabular-nums;
+}
+
+/* ---------- bonus/malus ---------- */
+.bm{display:grid;gap:16px;margin:24px 0 0}
+@media (min-width:740px){.bm{grid-template-columns:1fr 1fr;align-items:start}}
+.bmc{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.bmc h3{
+  display:flex;align-items:center;gap:10px;margin:0;padding:15px 20px;
+  font-family:var(--f-d);font-size:17px;text-transform:uppercase;letter-spacing:.03em;
+}
+.bmc h3 .ic{width:19px;height:19px;stroke-width:2}
+.bmc.pos h3{color:var(--bonus);background:rgba(75,227,154,.08);border-bottom:1px solid var(--line)}
+.bmc.neg h3{color:var(--malus);background:rgba(255,126,104,.08);border-bottom:1px solid var(--line)}
+.bmc ul{list-style:none;margin:0;padding:0}
+.bmc li{display:flex;align-items:center;gap:13px;padding:12px 20px;border-top:1px solid var(--line)}
+.bmc li:first-child{border-top:0}
+.bmc li .ic{width:20px;height:20px;color:var(--ink-3)}
+.bmc .lb{flex:1;font-size:15.5px;color:var(--ink-2)}
+.bmc .vl{
+  font-family:var(--f-n);font-weight:700;font-size:17px;font-variant-numeric:tabular-nums;
+  min-width:56px;text-align:center;border-radius:8px;padding:3px 10px;
+}
+.bmc.pos .vl{color:#0B1405;background:var(--bonus)}
+.bmc.neg .vl{color:#1B0803;background:var(--malus)}
+.bm-note{margin:14px 0 0;font-size:14.5px;color:var(--ink-3);max-width:70ch}
+.bm-note b{color:var(--ink-2)}
+
+/* ---------- soglie ticker ---------- */
+.ticker{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:18px 0 0;
+}
+@media (max-width:560px){.ticker{grid-template-columns:repeat(2,1fr)}}
+.tk{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:12px 8px;text-align:center;
+}
+.tk.hi{border-color:rgba(200,240,63,.5);background:rgba(200,240,63,.06)}
+.tk b{display:block;font-family:var(--f-n);font-weight:700;font-size:22px;color:var(--ink);
+  font-variant-numeric:tabular-nums}
+.tk.hi b{color:var(--volt)}
+.tk span{display:block;font-family:var(--f-n);font-weight:600;font-size:10.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:2px}
+
+/* ---------- barre modificatori ---------- */
+.scale{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  background:var(--panel);margin:18px 0 0}
+.sr{display:grid;grid-template-columns:minmax(96px,auto) 1fr 64px;align-items:center;
+  gap:14px;padding:10px 18px;border-top:1px solid var(--line)}
+.sr:first-child{border-top:0}
+.sk{font-family:var(--f-n);font-weight:600;font-size:14px;color:var(--ink-2);white-space:nowrap}
+.sv{font-family:var(--f-n);font-weight:700;font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
+.sv.pos{color:var(--bonus)}
+.sv.neg{color:var(--malus)}
+.sv.zero{color:var(--ink-3)}
+.track{position:relative;height:10px;border-radius:99px;background:#0B1810;border:1px solid var(--line)}
+.track i{position:absolute;top:-1px;bottom:-1px;border-radius:99px}
+.track.up i{left:-1px;background:linear-gradient(90deg,#2F8F5F,var(--bonus))}
+.track.mid::before{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;width:1px;background:var(--line-2)}
+.track.mid i.p{left:50%;background:var(--bonus)}
+.track.mid i.n{right:50%;background:var(--malus)}
+
+/* ---------- callout ---------- */
+.callout{
+  display:flex;gap:13px;align-items:flex-start;margin:18px 0 0;
+  background:rgba(200,240,63,.06);border:1px solid rgba(200,240,63,.25);
+  border-radius:var(--r-s);padding:14px 18px;color:var(--ink-2);font-size:15px;max-width:74ch;
+}
+.callout > .ic{width:19px;height:19px;color:var(--volt);margin-top:3px}
+.callout b{color:var(--ink)}
+.callout h4{margin:0 0 2px;font-family:var(--f-n);font-weight:600;font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
+.callout code{font-family:var(--f-n);font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* ---------- mercato ---------- */
+.mkts{display:grid;gap:16px;margin:24px 0 0}
+@media (min-width:900px){.mkts{grid-template-columns:repeat(3,1fr)}}
+.mkt{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.mkt-top{padding:16px 20px 13px;border-bottom:1px solid var(--line);
+  background:color-mix(in oklab,var(--c) 10%,var(--panel));box-shadow:inset 0 3px 0 var(--c)}
+.mkt-top h3{margin:0;font-family:var(--f-d);font-size:19px;text-transform:uppercase;
+  letter-spacing:.02em;color:var(--c)}
+.mkt-top .when{display:block;margin-top:4px;font-family:var(--f-n);font-weight:600;
+  font-size:12px;letter-spacing:.06em;color:var(--ink-2)}
+.mkt-body{padding:15px 20px 18px;display:grid;gap:10px;font-size:15px;color:var(--ink-2)}
+.mkt-body p{margin:0}
+.mkt-body b{color:var(--ink)}
+.mkt-stat{display:flex;align-items:baseline;gap:8px}
+.mkt-stat b{font-family:var(--f-n);font-weight:700;font-size:24px;color:var(--c)}
+.mkt-stat span{font-family:var(--f-n);font-weight:600;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.asta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin:22px 0 0;
+  background:linear-gradient(100deg, rgba(200,240,63,.14), rgba(200,240,63,.04) 60%);
+  border:1px solid rgba(200,240,63,.35);border-radius:var(--r);padding:18px 22px;
+}
+.asta .ic{width:26px;height:26px;color:var(--volt);stroke-width:1.9}
+.asta h3{margin:0;font-family:var(--f-d);font-size:20px;text-transform:uppercase;color:var(--ink)}
+.asta .dt{font-family:var(--f-n);font-weight:700;font-size:15px;color:var(--volt);
+  text-transform:uppercase;letter-spacing:.05em}
+.asta p{margin:0;flex-basis:100%;color:var(--ink-2);font-size:15px;max-width:70ch}
+
+/* ---------- competizioni ---------- */
+.comps{display:grid;gap:16px;margin:24px 0 0}
+@media (min-width:780px){.comps{grid-template-columns:1fr 1fr}}
+.comp{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.comp-top{display:flex;align-items:center;gap:12px;padding:15px 20px;
+  border-bottom:1px solid var(--line);
+  background:color-mix(in oklab,var(--c) 10%,var(--panel));box-shadow:inset 4px 0 0 var(--c)}
+.comp-top .ic{width:23px;height:23px;color:var(--c);flex:none}
+.comp-top h3{margin:0;font-family:var(--f-d);font-size:20px;text-transform:uppercase;
+  letter-spacing:.02em;line-height:1.05;color:var(--c)}
+.comp-top .rng{display:block;font-family:var(--f-n);font-weight:600;font-size:11.5px;
+  letter-spacing:.06em;color:var(--ink-2);margin-top:3px}
+.tag{
+  margin-left:auto;font-family:var(--f-n);font-weight:600;font-size:10px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+  border:1px dashed var(--line-2);border-radius:6px;padding:3px 8px;white-space:nowrap;
+}
+.comp-body{padding:15px 20px 18px;display:grid;gap:12px}
+.comp-body > p{margin:0;font-size:15px;color:var(--ink-2)}
+.comp-body b{color:var(--ink)}
+.fasi{list-style:none;margin:0;padding:0}
+.fasi li{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;
+  padding:6px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.fasi li:last-child{border-bottom:0}
+.fasi .gg{font-family:var(--f-n);font-weight:600;font-size:13px;color:var(--c);
+  white-space:nowrap;font-variant-numeric:tabular-nums}
+.crit{margin:0;padding-left:1.2em;color:var(--ink-2);font-size:14.5px}
+.crit li{margin:2px 0}
+.wide{grid-column:1/-1}
+@media (min-width:780px){
+  .comp.wide .comp-body{grid-template-columns:1fr 1fr;gap:12px 30px}
+  .comp.wide .comp-body > p{grid-column:1/-1}
+}
+h4.mini{display:flex;align-items:center;gap:7px;margin:0 0 6px;font-family:var(--f-n);
+  font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+h4.mini .ic{width:13px;height:13px;stroke-width:2}
+
+/* ---------- griglia calendario ---------- */
+.gc{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  margin-top:26px;overflow:hidden}
+.gs{overflow-x:auto;padding:20px 0 8px}
+table.grid{border-collapse:separate;border-spacing:0;width:100%;min-width:920px;table-layout:fixed}
+table.grid th,table.grid td{padding:0}
+table.grid .rh{position:sticky;left:0;z-index:2;background:var(--panel);
+  width:190px;text-align:left;padding:0 14px 0 20px;vertical-align:middle;
+  box-shadow:1px 0 0 var(--line)}
+@media (max-width:660px){table.grid{min-width:860px} table.grid .rh{width:158px;padding-left:14px}}
+table.grid thead .rh{font-family:var(--f-n);font-weight:600;font-size:10.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);padding-bottom:10px}
+table.grid thead th.g{font-family:var(--f-n);font-weight:500;font-size:10.5px;
+  color:var(--ink-3);text-align:center;padding-bottom:10px;font-variant-numeric:tabular-nums}
+table.grid thead th.g.mk{color:var(--ink);font-weight:700}
+table.grid td.g{padding:5px 0}
+table.grid tbody tr{height:34px}
+.rhi{display:flex;align-items:center;gap:9px}
+.rhi .ic{width:16px;height:16px;color:var(--c);flex:none}
+.rhn{display:block;font-family:var(--f-n);font-weight:700;font-size:13px;
+  letter-spacing:.04em;text-transform:uppercase;line-height:1.15;color:var(--c);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rhr{display:block;font-family:var(--f-n);font-weight:500;font-size:10px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums}
+.bar{display:block;height:20px;background:transparent}
+td.on .bar{background:color-mix(in oklab,var(--c) 32%,var(--panel))}
+td.on.l2 .bar{background:color-mix(in oklab,var(--c) 62%,var(--panel))}
+td.on.l3 .bar{background:var(--c);box-shadow:0 0 14px color-mix(in oklab,var(--c) 45%,transparent)}
+td.on.f .bar{border-radius:6px 0 0 6px}
+td.on.e .bar{border-radius:0 6px 6px 0}
+td.on.f.e .bar{border-radius:6px}
+td.on.ps:not(.f) .bar{box-shadow:inset 2px 0 0 var(--panel)}
+td.on.l3.ps:not(.f) .bar{box-shadow:inset 2px 0 0 var(--panel), 0 0 14px color-mix(in oklab,var(--c) 45%,transparent)}
+tr.ghost td.on .bar{opacity:.45;background-image:repeating-linear-gradient(135deg,transparent 0 4px,rgba(255,255,255,.18) 4px 6px)}
+td.off .bar{background:#13241A;height:2px;margin-top:9px}
+td.on:hover .bar{filter:brightness(1.15)}
+.gf{border-top:1px solid var(--line);padding:13px 20px 15px;display:flex;
+  flex-wrap:wrap;align-items:center;gap:10px 22px;background:var(--bg2)}
+.lg{display:flex;flex-wrap:wrap;gap:7px 18px;list-style:none;margin:0;padding:0}
+.lg li{display:flex;align-items:center;gap:8px;font-family:var(--f-n);font-weight:600;
+  font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.lg i{width:24px;height:11px;border-radius:4px;display:block}
+.lg .l1{background:#33584A}
+.lg .l2{background:#4E8168}
+.lg .l3{background:#7FD1A5}
+.ro{margin:0;flex:1 1 260px;font-family:var(--f-n);font-weight:500;font-size:12.5px;
+  color:var(--ink-2);display:flex;align-items:center;gap:8px;min-height:1.5em}
+.ro .ic{width:14px;height:14px;color:var(--ink-3);flex:none}
+.ro b{color:var(--ink)}
+
+/* ---------- premi ---------- */
+.premi{display:grid;gap:10px;margin:24px 0 0}
+@media (min-width:640px){.premi{grid-template-columns:repeat(2,1fr)}}
+.premio{
+  display:flex;align-items:center;gap:14px;
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 18px;
+}
+.premio .ic{width:22px;height:22px;color:var(--c);flex:none}
+.premio .who{flex:1;min-width:0}
+.premio .who b{display:block;font-family:var(--f-n);font-weight:700;font-size:15px;
+  text-transform:uppercase;letter-spacing:.03em;color:var(--ink)}
+.premio .who span{font-size:13px;color:var(--ink-3)}
+.premio .eur{font-family:var(--f-n);font-weight:700;font-size:21px;color:var(--volt);
+  white-space:nowrap;font-variant-numeric:tabular-nums}
+.premio.big{grid-column:1/-1;background:linear-gradient(100deg, rgba(200,240,63,.13), var(--panel) 55%);
+  border-color:rgba(200,240,63,.4)}
+.premio.big .eur{font-size:28px}
+.pot{display:flex;justify-content:space-between;gap:10px;margin:14px 0 0;
+  padding:13px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);
+  font-family:var(--f-n);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.pot b{color:var(--volt);font-size:15px;letter-spacing:.02em}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:30px 0 46px;color:var(--ink-3);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between}
+.sig{display:flex;align-items:center;gap:9px;font-family:var(--f-n);font-weight:600;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.sig .ic{width:16px;height:16px;color:var(--volt)}
+
+/* ---------- stampa ---------- */
+@media print{
+  body{background:#fff;color:#111}
+  .hero,.nav,footer{background:#fff;color:#111;border-color:#ddd}
+  h1.mark, .sec-t{color:#111}
+  h1.mark em{color:#3a7d1e}
+  .panel,.comp,.mkt,.gc,.bmc,.premio,.scale,.tk{background:#fff;border-color:#ccc;color:#222}
+  .ro{display:none}
+  .sec{padding-top:28px;break-inside:avoid}
+}
+</style>
+
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-rules" viewBox="0 0 24 24"><rect x="4.5" y="3" width="15" height="18" rx="2.2"/><line x1="8.5" y1="8" x2="15.5" y2="8"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="16" x2="13" y2="16"/></symbol>
+<symbol id="i-shirt" viewBox="0 0 24 24"><path d="M9 3 4.2 5.6 5.9 10 8 9.4V21h8V9.4l2.1.6 1.7-4.4L15 3a3 3 0 0 1-6 0Z"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><line x1="12" y1="3.5" x2="12" y2="20.5"/><line x1="5" y1="20.5" x2="19" y2="20.5"/><line x1="4" y1="7" x2="20" y2="7"/><path d="M4 7 1.8 13a3.2 3.2 0 0 0 4.4 0Z"/><path d="M20 7l2.2 6a3.2 3.2 0 0 1-4.4 0Z"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="6.4" rx="7.2" ry="3.1"/><path d="M4.8 6.4v5c0 1.7 3.2 3.1 7.2 3.1s7.2-1.4 7.2-3.1v-5"/><path d="M4.8 11.4v5c0 1.7 3.2 3.1 7.2 3.1s7.2-1.4 7.2-3.1v-5"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7.5 3.5h9v5.2a4.5 4.5 0 0 1-9 0Z"/><path d="M7.5 4.8H4.6v1.3a3.4 3.4 0 0 0 3.2 3.4"/><path d="M16.5 4.8h2.9v1.3a3.4 3.4 0 0 1-3.2 3.4"/><line x1="12" y1="13.2" x2="12" y2="16.5"/><path d="M9 16.5h6l.9 4H8.1Z"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.2"/><line x1="3.5" y1="9.8" x2="20.5" y2="9.8"/><line x1="8" y1="3" x2="8" y2="6.6"/><line x1="16" y1="3" x2="16" y2="6.6"/><line x1="7.6" y1="13.6" x2="7.6" y2="13.6"/><line x1="12" y1="13.6" x2="12" y2="13.6"/><line x1="16.4" y1="13.6" x2="16.4" y2="13.6"/><line x1="7.6" y1="17" x2="7.6" y2="17"/><line x1="12" y1="17" x2="12" y2="17"/></symbol>
+<symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="15.2" r="5.3"/><path d="M8.9 10.4 6.2 3.2h4.1l2 4"/><path d="M15.1 10.4 17.8 3.2h-4.1"/><path d="m12 13 .8 1.7 1.8.2-1.3 1.3.3 1.8-1.6-.9-1.6.9.3-1.8L9.4 15l1.8-.2Z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><polyline points="12,6.8 12,12.2 15.9,14.4"/></symbol>
+<symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><polygon points="12,8.1 15.6,10.7 14.2,14.9 9.8,14.9 8.4,10.7"/><line x1="12" y1="3.4" x2="12" y2="8.1"/><line x1="20.2" y1="9.4" x2="15.6" y2="10.7"/><line x1="17" y1="18.9" x2="14.2" y2="14.9"/><line x1="7" y1="18.9" x2="9.8" y2="14.9"/><line x1="3.8" y1="9.4" x2="8.4" y2="10.7"/></symbol>
+<symbol id="i-penalty" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4.3"/><line x1="13.6" y1="12" x2="20.4" y2="12"/><polyline points="17.6,9.1 20.5,12 17.6,14.9"/></symbol>
+<symbol id="i-miss" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4.3"/><line x1="14.2" y1="9.2" x2="20.4" y2="15.4"/><line x1="20.4" y1="9.2" x2="14.2" y2="15.4"/></symbol>
+<symbol id="i-glove" viewBox="0 0 24 24"><path d="M7.6 20.8v-6.9a2.1 2.1 0 0 1 4.2 0V8.6a1.8 1.8 0 0 1 3.6 0v3.1a1.8 1.8 0 0 1 3.6 0v4.6a4.5 4.5 0 0 1-4.5 4.5Z"/><line x1="7.6" y1="17.4" x2="19" y2="17.4"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="8.2" y="3.6" width="9.4" height="13.6" rx="1.6" transform="rotate(14 12 12)"/></symbol>
+<symbol id="i-cards" viewBox="0 0 24 24"><rect x="3.6" y="4.4" width="8.2" height="12" rx="1.5" transform="rotate(-11 8 10)"/><rect x="12.4" y="6.4" width="8.2" height="12" rx="1.5" transform="rotate(11 16 12)"/></symbol>
+<symbol id="i-assist" viewBox="0 0 24 24"><circle cx="17.6" cy="16.4" r="3.6"/><path d="M3.4 17.6C4.4 10 8.6 5.4 13.8 4.8"/><polyline points="10.8,3 14,4.9 12.4,8.1"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.2 19.2 6v6.2c0 4.1-3 7.4-7.2 8.7-4.2-1.3-7.2-4.6-7.2-8.7V6Z"/><polyline points="8.9,12 11.2,14.3 15.4,10.1"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,3.4 14.6,9.1 20.8,9.8 16.2,14 17.5,20.2 12,17.1 6.5,20.2 7.8,14 3.2,9.8 9.4,9.1"/></symbol>
+<symbol id="i-net" viewBox="0 0 24 24"><path d="M3 18.4V7.6h18v10.8"/><line x1="8" y1="7.6" x2="8" y2="18.4"/><line x1="13" y1="7.6" x2="13" y2="18.4"/><line x1="18" y1="7.6" x2="18" y2="18.4"/><line x1="3" y1="11.2" x2="21" y2="11.2"/><line x1="3" y1="14.8" x2="21" y2="14.8"/></symbol>
+<symbol id="i-owngoal" viewBox="0 0 24 24"><circle cx="12" cy="9.4" r="4.4"/><line x1="12" y1="14.4" x2="12" y2="20.6"/><polyline points="9.1,17.7 12,20.6 14.9,17.7"/></symbol>
+<symbol id="i-band" viewBox="0 0 24 24"><rect x="3.4" y="7.6" width="17.2" height="8.8" rx="2.4"/><line x1="9.2" y1="7.6" x2="9.2" y2="16.4"/><line x1="12" y1="7.6" x2="12" y2="16.4"/><line x1="14.8" y1="7.6" x2="14.8" y2="16.4"/></symbol>
+<symbol id="i-swap" viewBox="0 0 24 24"><polyline points="7.4,5.6 4.2,8.8 7.4,12"/><line x1="4.2" y1="8.8" x2="18.4" y2="8.8"/><polyline points="16.6,12 19.8,15.2 16.6,18.4"/><line x1="19.8" y1="15.2" x2="5.6" y2="15.2"/></symbol>
+<symbol id="i-hidden" viewBox="0 0 24 24"><path d="M3.2 12s3.6-6 8.8-6c1.5 0 2.9.5 4 1.2"/><path d="M20.8 12s-3.6 6-8.8 6c-1.6 0-3-.5-4.2-1.3"/><circle cx="12" cy="12" r="2.6"/><line x1="4" y1="3.6" x2="20" y2="20.4"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.6 21.4 20H2.6Z"/><line x1="12" y1="9.8" x2="12" y2="14"/><line x1="12" y1="16.8" x2="12" y2="16.8"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><line x1="12" y1="11.2" x2="12" y2="16.6"/><line x1="12" y1="7.8" x2="12" y2="7.8"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.6" y="10.4" width="14.8" height="9.8" rx="2.4"/><path d="M8.2 10.4V7.9a3.8 3.8 0 0 1 7.6 0v2.5"/><line x1="12" y1="14.2" x2="12" y2="16.4"/></symbol>
+<symbol id="i-euro" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M16 8.3a4.8 4.8 0 1 0 0 7.4"/><line x1="6.6" y1="11" x2="13" y2="11"/><line x1="6.6" y1="13.6" x2="13" y2="13.6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9.2" cy="8.4" r="3.6"/><path d="M3 20.2a6.2 6.2 0 0 1 12.4 0"/><path d="M16.4 5.3a3.6 3.6 0 0 1 0 6.2"/><path d="M17.8 20.2a6.2 6.2 0 0 0-2.4-4.9"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><line x1="6" y1="3.2" x2="6" y2="21"/><path d="M6 4.6h11.6l-2.3 3.9 2.3 3.9H6Z"/></symbol>
+<symbol id="i-hammer" viewBox="0 0 24 24"><path d="M4 20.4 13.6 10.8"/><path d="M9.9 7.1 12 5l1.4 1.4 3.5-3.5 4.2 4.2-3.5 3.5L19 12l-2.1 2.1Z"/></symbol>
+<symbol id="i-arrows" viewBox="0 0 24 24"><polyline points="8.4,3.6 11.6,6.8 8.4,10"/><path d="M11.6 6.8H6.4a3.2 3.2 0 0 0 0 6.4h11.2a3.2 3.2 0 0 1 0 6.4h-5.2"/><polyline points="15.6,14 12.4,17.2 15.6,20.4"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><line x1="9" y1="6.5" x2="20" y2="6.5"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="17.5" x2="20" y2="17.5"/><line x1="4.6" y1="6.5" x2="4.6" y2="6.5"/><line x1="4.6" y1="12" x2="4.6" y2="12"/><line x1="4.6" y1="17.5" x2="4.6" y2="17.5"/></symbol>
+<symbol id="i-sort" viewBox="0 0 24 24"><line x1="4" y1="6.4" x2="14" y2="6.4"/><line x1="4" y1="12" x2="11" y2="12"/><line x1="4" y1="17.6" x2="8" y2="17.6"/><polyline points="16.4,9.2 19.2,6.4 22,9.2"/><line x1="19.2" y1="6.4" x2="19.2" y2="17.6"/></symbol>
+<symbol id="i-pitch" viewBox="0 0 40 28"><rect x="1" y="1" width="38" height="26" rx="2.5"/><line x1="20" y1="1" x2="20" y2="27"/><circle cx="20" cy="14" r="5"/><rect x="1" y="7.5" width="6.5" height="13"/><rect x="32.5" y="7.5" width="6.5" height="13"/></symbol>
+<symbol id="i-swords" viewBox="0 0 24 24"><path d="M4 4h3.2l9 9-3.2 3.2-9-9Z"/><path d="m14.4 14.4 5.6 5.6"/><path d="M20 4h-3.2l-3.6 3.6"/><path d="m7.6 12.8-3.6 3.6"/><path d="m4 20 3.2-3.2"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.4 12a8.4 8.4 0 1 1-2.6-6.1"/><polyline points="20.8,3.6 20.8,8.4 16,8.4"/></symbol>
+</defs></svg>
+
+<header class="hero">
+  <div class="hero-pitch" aria-hidden="true"></div>
+  <div class="hero-in">
+    <span class="kick"><svg class="ic" aria-hidden="true"><use href="#i-ball"/></svg>Regolamento ufficiale &middot; Stagione 2026/27</span>
+    <h1 class="mark">Lega <em>ASS</em></h1>
+    <p class="hero-sub">Dieci squadre, cinque trofei, una regola sola: <b>arrivare davanti a tutti</b>. Rosa, punteggi, mercato e calendario, come configurati in piattaforma.</p>
+    <ul class="score">
+      <li><b>10</b><span>Squadre</span></li>
+      <li><b>500</b><span>Crediti</span></li>
+      <li><b>25</b><span>Giocatori</span></li>
+      <li><b>5</b><span>Trofei</span></li>
+      <li><b>20&nbsp;&euro;</b><span>Iscrizione</span></li>
+    </ul>
+    <p class="hero-date"><svg class="ic" aria-hidden="true"><use href="#i-hammer"/></svg><b>Asta iniziale &mdash; venerd&igrave; 4 settembre 2026</b></p>
+  </div>
+</header>
+
+<nav class="nav" id="nav" aria-label="Indice">
+  <div class="nav-in">
+    <a href="#lega"><svg class="ic" aria-hidden="true"><use href="#i-rules"/></svg>La lega</a>
+    <a href="#rosa"><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg>Rosa</a>
+    <a href="#bonus"><svg class="ic" aria-hidden="true"><use href="#i-ball"/></svg>Bonus</a>
+    <a href="#punteggio"><svg class="ic" aria-hidden="true"><use href="#i-scale"/></svg>Punteggio</a>
+    <a href="#mercato"><svg class="ic" aria-hidden="true"><use href="#i-coins"/></svg>Mercato</a>
+    <a href="#competizioni"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg>Competizioni</a>
+    <a href="#premi"><svg class="ic" aria-hidden="true"><use href="#i-medal"/></svg>Premi</a>
+    <a href="#rinvii"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Rinvii</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- 01 LA LEGA -->
+  <section class="sec" id="lega">
+    <div class="sec-h">
+      <div class="sec-kick">01 &mdash; Le basi</div>
+      <h2 class="sec-t">La lega</h2>
+    </div>
+    <p class="lead">Lega <b>privata</b> su Leghe Fantacalcio, modalit&agrave; <b>Classic</b>, disponibilit&agrave; calciatori <b>singola</b>: ogni giocatore di Serie A appartiene a una sola squadra.</p>
+    <div class="panel" style="margin-top:20px">
+      <div class="fact">
+        <svg class="ic" aria-hidden="true"><use href="#i-euro"/></svg>
+        <h4>Iscrizione: 20 &euro; a squadra</h4>
+        <p>Da versare prima dell&rsquo;asta. I <b>200 &euro;</b> raccolti tornano tutti in premi, senza trattenute.</p>
+      </div>
+      <div class="fact">
+        <svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>
+        <h4>Regole bloccate</h4>
+        <p>Il regolamento si approva prima dell&rsquo;asta e non cambia in corsa. I casi non previsti si decidono a maggioranza.</p>
+      </div>
+      <div class="fact">
+        <svg class="ic" aria-hidden="true"><use href="#i-list"/></svg>
+        <h4>Fonte voti: Fantacalcio</h4>
+        <p>Per la piattaforma fa fede la <a href="https://leghe.fantacalcio.it/guide-leghe-fantacalcio" target="_blank" rel="noopener">guida ufficiale</a>; per il resto, questa pagina.</p>
+      </div>
+    </div>
+    <h4 class="mini" style="margin-top:26px"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Le 10 squadre</h4>
+    <ul class="chips">
+      <li>Barbie-Sa FC</li><li>Berlusca Dortmund</li><li>REAL MIGRAZIONE</li>
+      <li>Udinegher (Dachau Arena)</li><li>Stan-banda</li><li>EL PIE DE ORO</li>
+      <li>SSC Baricellona</li><li>Real Bidon</li><li>Anni Di Piombo</li><li>AC cciu</li>
+    </ul>
+  </section>
+
+  <!-- 02 ROSA -->
+  <section class="sec" id="rosa">
+    <div class="sec-h">
+      <div class="sec-kick">02 &mdash; La squadra</div>
+      <h2 class="sec-t">Rosa &amp; formazione</h2>
+    </div>
+    <p class="lead"><b>25 giocatori</b>, composizione fissa per tutta la stagione, mercati e prestiti inclusi.</p>
+
+    <div class="reparti">
+      <div class="rep" style="--c:var(--c-uel)"><svg class="ic" aria-hidden="true"><use href="#i-glove"/></svg><b>3</b><span>Portieri</span></div>
+      <div class="rep" style="--c:var(--c-ucl)"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><b>8</b><span>Difensori</span></div>
+      <div class="rep" style="--c:var(--c-camp)"><svg class="ic" aria-hidden="true"><use href="#i-arrows"/></svg><b>8</b><span>Centrocampisti</span></div>
+      <div class="rep" style="--c:var(--c-cit)"><svg class="ic" aria-hidden="true"><use href="#i-ball"/></svg><b>6</b><span>Attaccanti</span></div>
+    </div>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="panel">
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg>Moduli consentiti &mdash; 7</h4>
+        <ul class="mods">
+          <li>3-4-3</li><li>3-5-2</li><li>4-3-3</li><li>4-4-2</li><li>4-5-1</li><li>5-3-2</li><li>5-4-1</li>
+        </ul>
+        <p class="bm-note" style="margin-top:12px">Panchina <b>variabile, senza limite</b>.</p>
+      </div>
+      <div class="panel">
+        <div class="fact">
+          <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>
+          <h4>Consegna</h4>
+          <p>Entro il <b>calcio d&rsquo;inizio della prima partita del turno</b>. La formazione resta <b>nascosta</b> agli avversari fino al blocco.</p>
+        </div>
+        <div class="fact">
+          <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
+          <h4>Dimenticata?</h4>
+          <p>Il sistema recupera la formazione del turno precedente della stessa competizione. Multa progressiva: <b>1&nbsp;&euro;</b>, poi <b>2&nbsp;&euro;</b>, poi <b>3&nbsp;&euro;</b> dalla terza in poi.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="panel">
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-swap"/></svg>4 sostituzioni &middot; Hybrid</h4>
+        <p style="margin:8px 0 0;font-size:15px;color:var(--ink-2)">Se un titolare resta senza voto entra la riserva <b style="color:var(--ink)">dello stesso ruolo</b>, in ordine di panchina. Solo se impossibile, il sistema valuta cambi con <b style="color:var(--ink)">cambio modulo</b> tra quelli consentiti. Niente riserva d&rsquo;ufficio.</p>
+      </div>
+      <div class="panel">
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Switch Plus</h4>
+        <p style="margin:8px 0 0;font-size:15px;color:var(--ink-2)">Indichi coppie titolare&ndash;riserva: se il titolare <b style="color:var(--ink)">non parte dal 1&deg; minuto</b>, entra la riserva senza bruciare un cambio. Con il PLUS la riserva pu&ograve; essere <b style="color:var(--ink)">di ruolo diverso</b>, modulo permettendo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 BONUS -->
+  <section class="sec" id="bonus">
+    <div class="sec-h">
+      <div class="sec-kick">03 &mdash; I numeri che contano</div>
+      <h2 class="sec-t">Bonus &amp; malus</h2>
+    </div>
+    <p class="lead">Uguali per tutti i ruoli.</p>
+
+    <div class="bm">
+      <div class="bmc pos">
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Bonus</h3>
+        <ul>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-ball"/></svg><span class="lb">Gol segnato</span><span class="vl">+3</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-penalty"/></svg><span class="lb">Rigore segnato</span><span class="vl">+3</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-glove"/></svg><span class="lb">Rigore parato</span><span class="vl">+3</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-assist"/></svg><span class="lb">Assist (standard, soft, gold)</span><span class="vl">+1</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><span class="lb">Porta inviolata</span><span class="vl">+1</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><span class="lb">Player of the match</span><span class="vl">+1</span></li>
+        </ul>
+      </div>
+      <div class="bmc neg">
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-cards"/></svg>Malus</h3>
+        <ul>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg><span class="lb">Ammonizione</span><span class="vl">&minus;0,5</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-net"/></svg><span class="lb">Gol subito</span><span class="vl">&minus;1</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-cards"/></svg><span class="lb">Espulsione</span><span class="vl">&minus;1</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-owngoal"/></svg><span class="lb">Autogol</span><span class="vl">&minus;2</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-miss"/></svg><span class="lb">Rigore sbagliato</span><span class="vl">&minus;3</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="bm-note">Gol vittoria e gol pareggio: nessun extra. Per gli assist vale il <a href="https://www.fantacalcio.it/regolamenti/assist" target="_blank" rel="noopener">regolamento di Fantacalcio.it</a>.</p>
+  </section>
+
+  <!-- 04 PUNTEGGIO -->
+  <section class="sec" id="punteggio">
+    <div class="sec-h">
+      <div class="sec-kick">04 &mdash; Dal voto al gol</div>
+      <h2 class="sec-t">Il punteggio</h2>
+    </div>
+    <p class="lead">Totale-squadra = <b>somma degli 11 fantavoti</b> (dopo cambi e switch) + modificatore difesa + fattore capitano. Poi il totale diventa gol.</p>
+
+    <h4 class="mini" style="margin-top:24px"><svg class="ic" aria-hidden="true"><use href="#i-ball"/></svg>Soglie gol &mdash; primo a 66, poi ogni 5,5 punti</h4>
+    <div class="ticker">
+      <div class="tk hi"><b>66</b><span>1 gol</span></div>
+      <div class="tk"><b>71,5</b><span>2 gol</span></div>
+      <div class="tk"><b>77</b><span>3 gol</span></div>
+      <div class="tk"><b>82,5</b><span>4 gol</span></div>
+      <div class="tk"><b>88</b><span>5 gol</span></div>
+      <div class="tk"><b>93,5</b><span>6 gol</span></div>
+      <div class="tk"><b>99</b><span>7 gol</span></div>
+      <div class="tk"><b>104,5</b><span>8 gol</span></div>
+      <div class="tk"><b>110</b><span>9 gol</span></div>
+      <div class="tk"><b>115,5</b><span>10 gol</span></div>
+    </div>
+
+    <div class="callout">
+      <svg class="ic" aria-hidden="true"><use href="#i-swords"/></svg>
+      <div>
+        <h4>Limitatore pareggio &mdash; attivo, anche sotto i 66</h4>
+        Stessa fascia gol ma differenza <b>&ge; 4,5 punti</b>? La squadra col totale pi&ugrave; alto prende <b>una rete extra</b>. Esempio: <code>76,5 &ndash; 72,0</code> non finisce 2-2 ma <b>3-2</b>.
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Modificatore difesa &mdash; fino a +5</h4>
+        <p style="margin:0;font-size:14.5px;color:var(--ink-2)">Con <b style="color:var(--ink)">almeno 4 difensori</b> schierati: media dei <b style="color:var(--ink)">voti puri</b> dei migliori 3 difensori <b style="color:var(--ink)">+ portiere</b>. I 6 politici valgono, le riserve d&rsquo;ufficio no. Se dopo i cambi resti con 3 difensori, salta.</p>
+        <div class="scale">
+          <div class="sr"><span class="sk">&lt; 6</span><span class="track up"><i style="width:0%"></i></span><span class="sv zero">0</span></div>
+          <div class="sr"><span class="sk">6 &ndash; 6,24</span><span class="track up"><i style="width:10%"></i></span><span class="sv pos">+0,5</span></div>
+          <div class="sr"><span class="sk">6,25 &ndash; 6,49</span><span class="track up"><i style="width:20%"></i></span><span class="sv pos">+1</span></div>
+          <div class="sr"><span class="sk">6,5 &ndash; 6,74</span><span class="track up"><i style="width:40%"></i></span><span class="sv pos">+2</span></div>
+          <div class="sr"><span class="sk">6,75 &ndash; 6,99</span><span class="track up"><i style="width:60%"></i></span><span class="sv pos">+3</span></div>
+          <div class="sr"><span class="sk">7 &ndash; 7,24</span><span class="track up"><i style="width:80%"></i></span><span class="sv pos">+4</span></div>
+          <div class="sr"><span class="sk">7,25 &ndash; 7,49</span><span class="track up"><i style="width:90%"></i></span><span class="sv pos">+4,5</span></div>
+          <div class="sr"><span class="sk">&ge; 7,5</span><span class="track up"><i style="width:100%"></i></span><span class="sv pos">+5</span></div>
+        </div>
+      </div>
+      <div>
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-band"/></svg>Fattore capitano &mdash; da &minus;1,5 a +1,5</h4>
+        <p style="margin:0;font-size:14.5px;color:var(--ink-2)">Capitano e vice designati <b style="color:var(--ink)">per tutta la stagione</b>. Conta il voto puro del capitano (o del vice, se il capitano non gioca). Se uno viene ceduto, si designa il sostituto.</p>
+        <div class="scale">
+          <div class="sr"><span class="sk">&le; 4,5</span><span class="track mid"><i class="n" style="width:50%"></i></span><span class="sv neg">&minus;1,5</span></div>
+          <div class="sr"><span class="sk">5</span><span class="track mid"><i class="n" style="width:33%"></i></span><span class="sv neg">&minus;1</span></div>
+          <div class="sr"><span class="sk">5,5</span><span class="track mid"><i class="n" style="width:17%"></i></span><span class="sv neg">&minus;0,5</span></div>
+          <div class="sr"><span class="sk">6</span><span class="track mid"></span><span class="sv zero">0</span></div>
+          <div class="sr"><span class="sk">6,5</span><span class="track mid"><i class="p" style="width:17%"></i></span><span class="sv pos">+0,5</span></div>
+          <div class="sr"><span class="sk">7</span><span class="track mid"><i class="p" style="width:33%"></i></span><span class="sv pos">+1</span></div>
+          <div class="sr"><span class="sk">&ge; 7,5</span><span class="track mid"><i class="p" style="width:50%"></i></span><span class="sv pos">+1,5</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 MERCATO -->
+  <section class="sec" id="mercato">
+    <div class="sec-h">
+      <div class="sec-kick">05 &mdash; Compra, vendi, presta</div>
+      <h2 class="sec-t">Il mercato</h2>
+    </div>
+
+    <div class="asta">
+      <svg class="ic" aria-hidden="true"><use href="#i-hammer"/></svg>
+      <h3>Asta iniziale</h3>
+      <span class="dt">Venerd&igrave; 4 settembre 2026 &middot; in presenza</span>
+      <p>500 crediti a testa, chiamata <b>per ruolo</b>, ordine estratto a sorte.</p>
+    </div>
+
+    <div class="mkts">
+      <article class="mkt" style="--c:var(--m-std)">
+        <div class="mkt-top">
+          <h3>Fase 1 &middot; Standard</h3>
+          <span class="when">6 set 2026, 00:00 &rarr; 31 dic 2026, 12:00</span>
+        </div>
+        <div class="mkt-body">
+          <p><b>Svincoli e acquisti</b> dal listone degli svincolati, pi&ugrave; gli <b>scambi tra squadre</b> (anche con conguaglio in crediti). Il numero di giocatori per ruolo deve restare 3-8-8-6.</p>
+          <p>Nello scambio la <b>quota d&rsquo;acquisto segue il giocatore</b>, non la squadra: pesa al momento di svincolarlo.</p>
+        </div>
+      </article>
+      <article class="mkt" style="--c:var(--m-get)">
+        <div class="mkt-top">
+          <h3>A gettoni</h3>
+          <span class="when">6 set 2026 &rarr; 31 mag 2027, 12:00</span>
+        </div>
+        <div class="mkt-body">
+          <div class="mkt-stat"><b>2</b><span>gettoni a stagione &middot; gratis</span></div>
+          <p>Un gettone ti d&agrave; uno svincolato <b>solo per il turno successivo</b>: poi torna libero da solo. Massimo <b>1 per turno</b>, riacquisto consentito.</p>
+          <p style="font-size:13.5px;color:var(--ink-3)">I giocatori entrati in lista dopo la 3&ordf; giornata si sbloccano qui solo dal 2 feb 2027 (23&ordf;).</p>
+        </div>
+      </article>
+      <article class="mkt" style="--c:var(--m-pre)">
+        <div class="mkt-top">
+          <h3>Prestiti</h3>
+          <span class="when">6 set 2026 &rarr; 31 mag 2027, 12:00</span>
+        </div>
+        <div class="mkt-body">
+          <div class="mkt-stat"><b>&infin;</b><span>prestiti &middot; durata 3&ndash;36 giornate</span></div>
+          <p>Cedi un tuo giocatore a un&rsquo;altra squadra, durata a scelta, eventuale <b>conguaglio in crediti</b>. A fine prestito torna <b>automaticamente</b> da te. Controproposte ammesse.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="callout">
+      <svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>
+      <div>
+        <h4>Sessione invernale &rarr; Fase 2</h4>
+        <b>Svincolo al buio</b> (nomi svelati a finestra chiusa): rimborso <b>100%</b> se il giocatore ha lasciato la Serie A, <b>50%</b> se ci gioca ancora. Poi <b>asta invernale</b> in presenza e <b>Fase 2 del mercato</b> dalla <b>prima settimana di febbraio</b>. Un tuo svincolato non si ricompra per meno di quanto incassato.
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 COMPETIZIONI -->
+  <section class="sec" id="competizioni">
+    <div class="sec-h">
+      <div class="sec-kick">06 &mdash; Cinque trofei</div>
+      <h2 class="sec-t">Le competizioni</h2>
+    </div>
+    <p class="lead">Una sola formazione per giornata vale per tutte le competizioni in corso. Vittoria <b>3 punti</b>, pareggio <b>1</b>, sconfitta <b>0</b>.</p>
+
+    <div class="comps">
+
+      <article class="comp wide" style="--c:var(--c-camp)">
+        <div class="comp-top">
+          <svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg>
+          <div><h3>Campionato</h3><span class="rng">4&ordf; &rarr; 38&ordf; giornata &middot; 35 turni</span></div>
+        </div>
+        <div class="comp-body">
+          <p>Il trofeo che conta davvero. Calendario all&rsquo;italiana su <b>4 giri</b> (l&rsquo;ultimo incompleto): affronti tutti <b>almeno 3 volte</b>.</p>
+          <div>
+            <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Giri</h4>
+            <ul class="fasi">
+              <li><span>Primo giro</span><span class="gg">4&ordf; &ndash; 12&ordf;</span></li>
+              <li><span>Secondo giro</span><span class="gg">13&ordf; &ndash; 21&ordf;</span></li>
+              <li><span>Terzo giro</span><span class="gg">22&ordf; &ndash; 30&ordf;</span></li>
+              <li><span>Quarto giro (8 turni)</span><span class="gg">31&ordf; &ndash; 38&ordf;</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-sort"/></svg>Classifica, in ordine</h4>
+            <ol class="crit">
+              <li>Punti</li><li>Somma punti totale</li><li>Differenza reti</li>
+              <li>Gol fatti</li><li>Gol subiti</li><li>Classifica avulsa</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="comp" style="--c:var(--c-ucl)">
+        <div class="comp-top">
+          <svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>
+          <div><h3>Champions League</h3><span class="rng">4&ordf; &rarr; 19&ordf; giornata &middot; 16 turni</span></div>
+        </div>
+        <div class="comp-body">
+          <p>Tutte e 10, <b>2 gironi da 5</b> sorteggiati. Andata e ritorno, passano <b>le prime 4</b> di ogni girone. Poi eliminazione diretta A/R.</p>
+          <ul class="fasi">
+            <li><span>Gironi (A/R)</span><span class="gg">4&ordf; &ndash; 13&ordf;</span></li>
+            <li><span>Quarti (A/R)</span><span class="gg">14&ordf; &ndash; 15&ordf;</span></li>
+            <li><span>Semifinali (A/R)</span><span class="gg">16&ordf; &ndash; 17&ordf;</span></li>
+            <li><span>Finale (A/R)</span><span class="gg">18&ordf; &ndash; 19&ordf;</span></li>
+          </ul>
+          <div>
+            <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-sort"/></svg>Passaggio turno</h4>
+            <ol class="crit">
+              <li>Risultato negli incontri</li><li>Somma punti</li>
+              <li>Supplementari e rigori</li><li>Gol in trasferta</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="comp" style="--c:var(--c-uel)">
+        <div class="comp-top">
+          <svg class="ic" aria-hidden="true"><use href="#i-medal"/></svg>
+          <div><h3>Europa League</h3><span class="rng">prevista 16&ordf; &rarr; 19&ordf; giornata</span></div>
+          <span class="tag">da creare</span>
+        </div>
+        <div class="comp-body">
+          <p>Il ripescaggio: le <b>4 eliminate ai quarti di Champions</b> giocano semifinali e finale, andata e ritorno. Si crea dopo i quarti.</p>
+          <ul class="fasi">
+            <li><span>Semifinali (A/R)</span><span class="gg">16&ordf; &ndash; 17&ordf;</span></li>
+            <li><span>Finale (A/R)</span><span class="gg">18&ordf; &ndash; 19&ordf;</span></li>
+          </ul>
+          <p style="font-size:13.5px;color:var(--ink-3)">Stessi criteri di passaggio turno della Champions.</p>
+        </div>
+      </article>
+
+      <article class="comp" style="--c:var(--c-cit)">
+        <div class="comp-top">
+          <svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg>
+          <div><h3>Coppa Italia</h3><span class="rng">21&ordf; &rarr; 34&ordf; giornata &middot; 14 turni</span></div>
+        </div>
+        <div class="comp-body">
+          <p>Si riparte da zero al giro di boa: <b>2 gironi da 5</b>, andata e ritorno, ma passano solo <b>le prime 2</b>.</p>
+          <ul class="fasi">
+            <li><span>Gironi (A/R)</span><span class="gg">21&ordf; &ndash; 30&ordf;</span></li>
+            <li><span>Semifinali (A/R)</span><span class="gg">31&ordf; &ndash; 32&ordf;</span></li>
+            <li><span>Finale (A/R)</span><span class="gg">33&ordf; &ndash; 34&ordf;</span></li>
+          </ul>
+          <p style="font-size:13.5px;color:var(--ink-3)">Criteri identici alla Champions. Niente fattore campo.</p>
+        </div>
+      </article>
+
+      <article class="comp" style="--c:var(--c-hig)">
+        <div class="comp-top">
+          <svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg>
+          <div><h3>Highlander</h3><span class="rng">30&ordf; &rarr; 38&ordf; giornata &middot; 9 turni</span></div>
+        </div>
+        <div class="comp-body">
+          <p>Ne rester&agrave; soltanto uno. Ogni turno <b>elimina il punteggio pi&ugrave; basso</b> di giornata: da 10 squadre a 1 in 9 turni, fino all&rsquo;ultima di campionato.</p>
+          <div>
+            <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-sort"/></svg>In caso di parit&agrave;</h4>
+            <ol class="crit">
+              <li>Fantavoto pi&ugrave; alto tra titolari e subentrati</li>
+              <li>Fantavoto pi&ugrave; alto tra i panchinari non subentrati, scorrendo la lista</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <h4 class="mini" style="margin-top:34px"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Stagione a colpo d&rsquo;occhio &mdash; giornate di Serie A</h4>
+    <div class="gc">
+      <div class="gs">
+        <table class="grid" id="gridtable"></table>
+      </div>
+      <div class="gf">
+        <ul class="lg">
+          <li><i class="l1"></i>Gironi / giri</li>
+          <li><i class="l2"></i>Eliminazione</li>
+          <li><i class="l3"></i>Finale</li>
+        </ul>
+        <p class="ro" id="readout"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Tocca una cella per la fase &middot; Europa League tratteggiata: da creare.</span></p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>
+      <div>
+        <h4>Supercoppa italiana: nessuna giornata spezzata</h4>
+        Dal 2026/27 torna la <b>partita secca</b> (Inter&ndash;Lazio, 22/23 dicembre): si gioca nella <b>sosta natalizia tra la 16&ordf; e la 17&ordf;</b>, senza rinvii in Serie A. Nessuno slittamento per le nostre competizioni. Unica giornata a competizione singola: la <b>20&ordf;</b>, solo campionato.
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 PREMI -->
+  <section class="sec" id="premi">
+    <div class="sec-h">
+      <div class="sec-kick">07 &mdash; Il bottino</div>
+      <h2 class="sec-t">I premi</h2>
+    </div>
+    <p class="lead">10 &times; 20 &euro; = <b>200 &euro;</b>, redistribuiti al centesimo.</p>
+
+    <div class="premi">
+      <div class="premio big" style="--c:var(--c-camp)">
+        <svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg>
+        <div class="who"><b>Campionato &mdash; 1&deg; posto</b><span>il vero titolo</span></div>
+        <span class="eur">80 &euro;</span>
+      </div>
+      <div class="premio" style="--c:var(--c-camp)">
+        <svg class="ic" aria-hidden="true"><use href="#i-medal"/></svg>
+        <div class="who"><b>Campionato &mdash; 2&deg; posto</b></div>
+        <span class="eur">40 &euro;</span>
+      </div>
+      <div class="premio" style="--c:var(--c-ucl)">
+        <svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>
+        <div class="who"><b>Champions League</b><span>vincitore</span></div>
+        <span class="eur">20 &euro;</span>
+      </div>
+      <div class="premio" style="--c:var(--c-uel)">
+        <svg class="ic" aria-hidden="true"><use href="#i-medal"/></svg>
+        <div class="who"><b>Europa League</b><span>vincitore</span></div>
+        <span class="eur">20 &euro;</span>
+      </div>
+      <div class="premio" style="--c:var(--c-cit)">
+        <svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg>
+        <div class="who"><b>Coppa Italia</b><span>vincitore</span></div>
+        <span class="eur">20 &euro;</span>
+      </div>
+      <div class="premio" style="--c:var(--c-hig)">
+        <svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg>
+        <div class="who"><b>Highlander</b><span>l&rsquo;ultimo in piedi</span></div>
+        <span class="eur">20 &euro;</span>
+      </div>
+    </div>
+    <div class="pot"><span>Montepremi totale</span><b>200 &euro;</b></div>
+    <p class="bm-note">Le multe per formazioni non consegnate restano in cassa: a fine stagione la lega decide come usarle.</p>
+  </section>
+
+  <!-- 08 RINVII -->
+  <section class="sec" id="rinvii">
+    <div class="sec-h">
+      <div class="sec-kick">08 &mdash; Quando la Serie A si ferma</div>
+      <h2 class="sec-t">Rinvii &amp; recuperi</h2>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="panel">
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>Rinvio a turno gi&agrave; iniziato</h4>
+        <div class="fact">
+          <svg class="ic" aria-hidden="true"><use href="#i-swords"/></svg>
+          <h4>Coppe a eliminazione</h4>
+          <p>Voto d&rsquo;ufficio <b>6</b> ai giocatori coinvolti. Risultato definitivo.</p>
+        </div>
+        <div class="fact">
+          <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <h4>Campionato</h4>
+          <p>La giornata si calcola subito e viene <b>ricalcolata</b> a recupero giocato.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <h4 class="mini"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg>Recupero noto in anticipo</h4>
+        <div class="fact">
+          <svg class="ic" aria-hidden="true"><use href="#i-swords"/></svg>
+          <h4>Coppe a eliminazione</h4>
+          <p>Il turno di coppa <b>slitta</b> al recupero: niente turni dimezzati.</p>
+        </div>
+        <div class="fact">
+          <svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <h4>Campionato</h4>
+          <p>Come sopra: calcolo subito, <b>ricalcolo</b> a recupero avvenuto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="sig"><svg class="ic" aria-hidden="true"><use href="#i-pitch"/></svg>Lega ASS &middot; 2026/27</span>
+    <span>Dati verificati sulla piattaforma &middot; <a href="https://leghe.fantacalcio.it/lega-ass" target="_blank" rel="noopener">leghe.fantacalcio.it/lega-ass</a></span>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================================
+   CALENDARIO - date verificate sulla piattaforma (31/08/2026).
+   lvl 1 = gironi/giri | 2 = eliminazione | 3 = finale
+   ghost = competizione non ancora creata (Europa League)
+   ========================================================================== */
+var GIORNATE = 38;
+var COMPETIZIONI = [
+  { nome:'Campionato', varc:'--c-camp', icona:'i-trophy', fasi:[
+    { da:4,  a:12, nome:'Primo giro',            lvl:1 },
+    { da:13, a:21, nome:'Secondo giro',          lvl:1 },
+    { da:22, a:30, nome:'Terzo giro',            lvl:1 },
+    { da:31, a:38, nome:'Quarto giro (8 turni)', lvl:1 }
+  ]},
+  { nome:'Champions League', varc:'--c-ucl', icona:'i-star', fasi:[
+    { da:4,  a:13, nome:'Fase a gironi (A/R)', lvl:1 },
+    { da:14, a:15, nome:'Quarti (A/R)',        lvl:2 },
+    { da:16, a:17, nome:'Semifinali (A/R)',    lvl:2 },
+    { da:18, a:19, nome:'Finale (A/R)',        lvl:3 }
+  ]},
+  { nome:'Europa League', varc:'--c-uel', icona:'i-medal', ghost:true, fasi:[
+    { da:16, a:17, nome:'Semifinali (A/R) - prevista', lvl:2 },
+    { da:18, a:19, nome:'Finale (A/R) - prevista',     lvl:3 }
+  ]},
+  { nome:'Coppa Italia', varc:'--c-cit', icona:'i-trophy', fasi:[
+    { da:21, a:30, nome:'Fase a gironi (A/R)', lvl:1 },
+    { da:31, a:32, nome:'Semifinali (A/R)',    lvl:2 },
+    { da:33, a:34, nome:'Finale (A/R)',        lvl:3 }
+  ]},
+  { nome:'Highlander', varc:'--c-hig', icona:'i-flag', fasi:[
+    { da:30, a:37, nome:'Turni di eliminazione', lvl:2 },
+    { da:38, a:38, nome:'Turno decisivo',        lvl:3 }
+  ]}
+];
+
+var ORD = '\u00aa';
+var MID = '\u00b7';
+
+(function buildGrid(){
+  var table = document.getElementById('gridtable');
+  if(!table) return;
+  var g, i;
+  var NS = 'http://www.w3.org/2000/svg';
+
+  var thead = document.createElement('thead');
+  var hr = document.createElement('tr');
+  var hh = document.createElement('th');
+  hh.className = 'rh'; hh.scope = 'col'; hh.textContent = 'Giornata';
+  hr.appendChild(hh);
+  for(g = 1; g <= GIORNATE; g++){
+    var th = document.createElement('th');
+    th.className = 'g' + (g % 5 === 0 || g === 1 ? ' mk' : '');
+    th.scope = 'col';
+    th.textContent = g;
+    hr.appendChild(th);
+  }
+  thead.appendChild(hr);
+  table.appendChild(thead);
+
+  var tbody = document.createElement('tbody');
+  COMPETIZIONI.forEach(function(c){
+    var start = Math.min.apply(null, c.fasi.map(function(f){ return f.da; }));
+    var end   = Math.max.apply(null, c.fasi.map(function(f){ return f.a;  }));
+
+    var tr = document.createElement('tr');
+    tr.style.setProperty('--c', 'var(' + c.varc + ')');
+    if(c.ghost) tr.className = 'ghost';
+
+    var rh = document.createElement('th');
+    rh.className = 'rh'; rh.scope = 'row';
+    var box = document.createElement('span');
+    box.className = 'rhi';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'ic');
+    svg.setAttribute('aria-hidden', 'true');
+    var use = document.createElementNS(NS, 'use');
+    use.setAttribute('href', '#' + c.icona);
+    svg.appendChild(use);
+    var txt = document.createElement('span');
+    var n = document.createElement('span'); n.className = 'rhn'; n.textContent = c.nome;
+    var r = document.createElement('span'); r.className = 'rhr';
+    r.textContent = start + ORD + ' - ' + end + ORD + (c.ghost ? ' (da creare)' : '');
+    txt.appendChild(n); txt.appendChild(r);
+    box.appendChild(svg); box.appendChild(txt);
+    rh.appendChild(box);
+    tr.appendChild(rh);
+
+    for(g = 1; g <= GIORNATE; g++){
+      var td = document.createElement('td');
+      var fase = null;
+      for(i = 0; i < c.fasi.length; i++){
+        if(g >= c.fasi[i].da && g <= c.fasi[i].a){ fase = c.fasi[i]; break; }
+      }
+      if(fase){
+        var cls = 'g on l' + fase.lvl;
+        if(g === start)   cls += ' f';
+        if(g === end)     cls += ' e';
+        if(g === fase.da) cls += ' ps';
+        td.className = cls;
+        td.setAttribute('data-c', c.nome);
+        td.setAttribute('data-f', fase.nome + ' ' + MID + ' ' + g + ORD + ' giornata');
+        td.title = c.nome + ' \u2014 ' + fase.nome + ' ' + MID + ' ' + g + ORD;
+      } else {
+        td.className = 'g off';
+      }
+      var bar = document.createElement('span');
+      bar.className = 'bar';
+      td.appendChild(bar);
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+
+  var ro = document.getElementById('readout');
+  var out = ro ? ro.querySelector('span') : null;
+  var base = out ? out.textContent : '';
+  function show(e){
+    if(!out || !e.target.closest) return;
+    var cell = e.target.closest('td.on');
+    if(!cell) return;
+    out.innerHTML = '';
+    var b = document.createElement('b');
+    b.textContent = cell.getAttribute('data-c');
+    out.appendChild(b);
+    out.appendChild(document.createTextNode(' \u2014 ' + cell.getAttribute('data-f')));
+  }
+  table.addEventListener('pointerover', show);
+  table.addEventListener('click', show);
+  table.addEventListener('pointerleave', function(){ if(out) out.textContent = base; });
+})();
+
+/* ---------- indice attivo ---------- */
+(function scrollspy(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var bar = document.querySelector('.nav-in');
+  var map = {};
+  links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  var sections = links
+    .map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); })
+    .filter(Boolean);
+  if(!sections.length) return;
+
+  var current = null;
+  function setActive(id){
+    if(id === current) return;
+    current = id;
+    links.forEach(function(a){ a.classList.remove('on'); });
+    var a = map[id];
+    if(!a) return;
+    a.classList.add('on');
+    if(bar && bar.scrollWidth > bar.clientWidth + 4){
+      var target = a.offsetLeft - (bar.clientWidth - a.offsetWidth) / 2;
+      bar.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+    }
+  }
+
+  function update(){
+    var line = window.innerHeight * 0.3;
+    var best = sections[0];
+    for(var i = 0; i < sections.length; i++){
+      if(sections[i].getBoundingClientRect().top <= line) best = sections[i];
+    }
+    setActive(best.id);
+  }
+
+  var queued = false;
+  function onScroll(){
+    if(queued) return;
+    queued = true;
+    requestAnimationFrame(function(){ queued = false; update(); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  links.forEach(function(a){
+    a.addEventListener('click', function(){ setActive(a.getAttribute('href').slice(1)); });
+  });
+  update();
+})();
+</script>
