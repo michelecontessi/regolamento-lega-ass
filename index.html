@@ -34,6 +34,7 @@
   --m-std:#FF6E5E;
   --m-get:#5FA8FF;
   --m-pre:#C08BFF;
+  --m-sca:#3FD9C9;
   --r:16px;
   --r-s:10px;
   --f-d:'Archivo Black','Arial Black',system-ui,sans-serif;
@@ -270,7 +271,7 @@ main{padding-bottom:90px}
 
 /* ---------- mercato ---------- */
 .mkts{display:grid;gap:16px;margin:24px 0 0}
-@media (min-width:900px){.mkts{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:720px){.mkts{grid-template-columns:repeat(2,1fr)}}
 .mkt{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
   overflow:hidden;display:flex;flex-direction:column;
@@ -697,7 +698,16 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justif
           <span class="when">5 set 2026, 12:00 &rarr; 11 set 2026, 20:00</span>
         </div>
         <div class="mkt-body">
-          <p><b>Svincoli e acquisti</b> dal listone degli svincolati, pi&ugrave; gli <b>scambi tra squadre</b> (anche con conguaglio in crediti). Il numero di giocatori per ruolo deve restare 3-8-8-6.</p>
+          <p><b>Svincoli e acquisti</b> dal listone degli svincolati. Il numero di giocatori per ruolo deve restare 3-8-8-6.</p>
+        </div>
+      </article>
+      <article class="mkt" style="--c:var(--m-sca)">
+        <div class="mkt-top">
+          <h3>Mercato scambi</h3>
+          <span class="when">5 set 2026, 12:00 &rarr; 31 mag 2027, 12:00</span>
+        </div>
+        <div class="mkt-body">
+          <p><b>Scambi tra squadre</b> aperti per tutta la stagione, fino alla fine del campionato. Unica opzione attiva: la <b>possibilit&agrave; di conguaglio in crediti</b>. Il numero di giocatori per ruolo deve restare 3-8-8-6.</p>
           <p>Nello scambio la <b>quota d&rsquo;acquisto segue il giocatore</b>, non la squadra: pesa al momento di svincolarlo.</p>
         </div>
       </article>
